@@ -943,10 +943,170 @@ body.light .navbar {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive design */
+
+/* ========== Mobile Responsive Styles ========== */
 @media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .hero__top {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero__image-wrapper {
+    width: 140px;
+    height: 140px;
+    border: 3px solid #2563eb;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0 1rem;
+  }
+
+  .hero__text {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .hero__socials {
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-link {
+    width: 38px;
+    height: 38px;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero__buttons {
+    gap: 0.8rem;
+    padding: 0 1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .nav {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav__list {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav__link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about__text {
+    padding: 0 0.5rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .education-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .contact__intro {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact__info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact__card {
+    padding: 1.2rem;
+  }
+
+  .contact__form {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .form__row {
+    flex-direction: column;
+  }
+
+  .form__group input,
+  .form__group textarea {
+    padding: 0.8rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
   .safety-certifications-grid {
     grid-template-columns: 1fr;
+    padding: 0 0.5rem;
   }
   
   .safety-cert-card {
@@ -958,62 +1118,31 @@ body.light .navbar {
     height: 50px;
     font-size: 2rem;
   }
-}
 
-.loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #050816;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
+  .loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #050816;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
 
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 4px solid rgba(37, 99, 235, 0.3);
-  border-top-color: #2563eb;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(37, 99, 235, 0.3);
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
-}
-
-
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.back-to-top:hover {
-  background-color: #0056b3;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
-}
-
-.back-to-top:active {
-  transform: translateY(0);
 }
