@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import BackToTop from './components/BackToTop';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Import all sections as components.
 import Hero from "./components/Hero.jsx";
@@ -48,6 +49,7 @@ function App() {
       </footer>
 
       <BackToTop />
+      <SpeedInsights />
     </div>
   );
 }
