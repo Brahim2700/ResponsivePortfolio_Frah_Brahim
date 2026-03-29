@@ -598,6 +598,7 @@ body.light .language-level {
 }
 
 .project-card {
+  display: block;
   background: #0b1120;
   border: 1px solid #1f2937;
   border-radius: 0.75rem;
@@ -605,6 +606,11 @@ body.light .language-level {
   text-align: left;
   transition: all 0.3s ease;
   position: relative;
+}
+
+.project-card--link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .project-card:hover {

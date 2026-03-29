@@ -11,8 +11,13 @@ function Projects() {
       </p>
       
       <div className="projects-grid">
-        <div className="project-card">
-          <div className="project-tag">In Development</div>
+        <a
+          href="https://survey-calculator-suite.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-card project-card--link"
+        >
+          <div className="project-tag">Live</div>
           <h3>Survey Calculator Suite</h3>
           <p>
             Professional toolset for surveyors including coordinate system conversions 
@@ -20,7 +25,7 @@ function Projects() {
             and bearing/distance calculations.
           </p>
           <div className="project-tech">React • JavaScript • Geodesy • Surveying</div>
-        </div>
+        </a>
 
         <div className="project-card">
           <div className="project-tag">In Development</div>
