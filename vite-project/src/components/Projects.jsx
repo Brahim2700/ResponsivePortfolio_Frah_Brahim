@@ -17,7 +17,7 @@ function Projects({ language }) {
           link: "https://survey-calculator-suite.vercel.app/"
         },
         {
-          tag: "Live",
+          tag: "In Development",
           title: "Interactive WebGIS Dashboard",
           description:
             "Web-based GIS platform for visualizing and analyzing spatial data with interactive maps, layer management, data filtering, and real-time updates for infrastructure projects.",
@@ -25,7 +25,7 @@ function Projects({ language }) {
           link: "https://gis-dash.vercel.app/"
         },
         {
-          tag: "Live",
+          tag: "In Development",
           title: "GNSS Data Processor",
           description:
             "Advanced tool for processing and visualizing GNSS/GPS survey data. Features include RINEX file support, satellite track visualization, position accuracy analysis, and quality control metrics.",
@@ -48,7 +48,7 @@ function Projects({ language }) {
           link: "https://survey-calculator-suite.vercel.app/"
         },
         {
-          tag: "En ligne",
+          tag: "En développement",
           title: "Tableau de Bord WebGIS Interactif",
           description:
             "Plateforme SIG web pour visualiser et analyser des données spatiales avec cartes interactives, gestion de couches, filtres de données et mises à jour en temps réel pour les projets d'infrastructure.",
@@ -56,7 +56,7 @@ function Projects({ language }) {
           link: "https://gis-dash.vercel.app/"
         },
         {
-          tag: "En ligne",
+          tag: "En développement",
           title: "Processeur de Données GNSS",
           description:
             "Outil avancé pour traiter et visualiser les données de levés GNSS/GPS. Fonctionnalités: support des fichiers RINEX, visualisation des trajectoires satellites, analyse de précision et indicateurs de contrôle qualité.",
