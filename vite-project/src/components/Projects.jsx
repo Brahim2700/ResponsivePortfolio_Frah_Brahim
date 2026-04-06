@@ -17,18 +17,20 @@ function Projects({ language }) {
           link: "https://survey-calculator-suite.vercel.app/"
         },
         {
-          tag: "In Development",
+          tag: "Live",
           title: "Interactive WebGIS Dashboard",
           description:
             "Web-based GIS platform for visualizing and analyzing spatial data with interactive maps, layer management, data filtering, and real-time updates for infrastructure projects.",
-          tech: "React • Leaflet • GeoJSON • MapBox"
+          tech: "React • Leaflet • GeoJSON • MapBox",
+          link: "https://gis-dash.vercel.app/"
         },
         {
-          tag: "Planned",
+          tag: "Live",
           title: "GNSS Data Processor",
           description:
             "Advanced tool for processing and visualizing GNSS/GPS survey data. Features include RINEX file support, satellite track visualization, position accuracy analysis, and quality control metrics.",
-          tech: "React • Python • GNSS • Data Visualization"
+          tech: "React • Python • GNSS • Data Visualization",
+          link: "https://gnss-data-processor.vercel.app/"
         }
       ]
     },
@@ -46,18 +48,20 @@ function Projects({ language }) {
           link: "https://survey-calculator-suite.vercel.app/"
         },
         {
-          tag: "En développement",
+          tag: "En ligne",
           title: "Tableau de Bord WebGIS Interactif",
           description:
             "Plateforme SIG web pour visualiser et analyser des données spatiales avec cartes interactives, gestion de couches, filtres de données et mises à jour en temps réel pour les projets d'infrastructure.",
-          tech: "React • Leaflet • GeoJSON • MapBox"
+          tech: "React • Leaflet • GeoJSON • MapBox",
+          link: "https://gis-dash.vercel.app/"
         },
         {
-          tag: "Planifié",
+          tag: "En ligne",
           title: "Processeur de Données GNSS",
           description:
             "Outil avancé pour traiter et visualiser les données de levés GNSS/GPS. Fonctionnalités: support des fichiers RINEX, visualisation des trajectoires satellites, analyse de précision et indicateurs de contrôle qualité.",
-          tech: "React • Python • GNSS • Data Visualization"
+          tech: "React • Python • GNSS • Data Visualization",
+          link: "https://gnss-data-processor.vercel.app/"
         }
       ]
     }
