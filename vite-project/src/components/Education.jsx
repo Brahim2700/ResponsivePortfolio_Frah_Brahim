@@ -1,10 +1,57 @@
 // Education.jsx
 import React from "react";
 
-function Education() {
+function Education({ language }) {
+  const t =
+    language === "fr"
+      ? {
+          title: "Formation",
+          master: "Master en Génie Civil",
+          bachelor: "Licence en Génie Civil",
+          technician: "Technicien Supérieur en Sciences Géodésiques et Travaux Topographiques",
+          professionalCerts: "Certifications Professionnelles",
+          safetyTitle: "Sécurité et Autres Formations",
+          languagesTitle: "Langues",
+          french: "Français",
+          english: "Anglais",
+          arabic: "Arabe",
+          fullProfessional: "Maîtrise professionnelle",
+          native: "Langue natale",
+          safetyBadges: [
+            "IOSH Managing Safely HSE",
+            "IOSH Working Safely HSE",
+            "Formation premiers secours avancée",
+            "Formation premiers secours de base",
+            "Permis conduite défensive",
+            "Permis de conduire Cat-B"
+          ]
+        }
+      : {
+          title: "Education",
+          master: "Master's Degree in Civil Engineering",
+          bachelor: "Bachelor's Degree in Civil Engineering",
+          technician: "Senior Technician in Geodetic Science and Topographic Survey Works",
+          professionalCerts: "Professional Certifications",
+          safetyTitle: "Safety & Other Training",
+          languagesTitle: "Languages",
+          french: "French",
+          english: "English",
+          arabic: "Arabic",
+          fullProfessional: "Full Professional",
+          native: "Native",
+          safetyBadges: [
+            "IOSH Managing Safely HSE",
+            "IOSH Working Safely HSE",
+            "Advanced First Aid Training",
+            "Basic First Aid Training",
+            "Defensive Driving Licence",
+            "Driving Licence Cat-B"
+          ]
+        };
+
   return (
     <section className="section" id="education">
-      <h2>Education</h2>
+      <h2>{t.title}</h2>
       
       <div className="education-grid">
         <div className="education-card">
@@ -13,7 +60,7 @@ function Education() {
               <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
             </svg>
           </div>
-          <h3>Master's Degree in Civil Engineering</h3>
+          <h3>{t.master}</h3>
           <p className="education-institution">Abdelhamid Ibn Badis University of Mostaganem</p>
           <p className="education-location">Algeria</p>
           <p className="education-details">Specialization: Civil Engineering Structures, Roads & Bridges</p>
@@ -26,7 +73,7 @@ function Education() {
               <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
             </svg>
           </div>
-          <h3>Bachelor's Degree in Civil Engineering</h3>
+          <h3>{t.bachelor}</h3>
           <p className="education-institution">Abdelhamid Ibn Badis University of Mostaganem</p>
           <p className="education-location">Algeria</p>
           <p className="education-details">Structural analysis, geotechnical engineering, and construction management</p>
@@ -39,7 +86,7 @@ function Education() {
               <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
             </svg>
           </div>
-          <h3>Senior Technician in Geodetic Science and Topographic Survey Works</h3>
+          <h3>{t.technician}</h3>
           <p className="education-institution">Algerian Space Agency (ASAL) - National Centre of Space Techniques</p>
           <p className="education-location">Algeria</p>
           <p className="education-details">Program covering land surveying, geodesy, photogrammetry, cartography, cadastre, GIS, and spatial positioning systems (GNSS).</p>
@@ -50,7 +97,7 @@ function Education() {
 
       {/* Professional Certifications */}
       <div className="certifications">
-        <h3 className="certifications-title">Professional Certifications</h3>
+        <h3 className="certifications-title">{t.professionalCerts}</h3>
         <div className="certifications-grid">
           
           {/* BIM Certification */}
@@ -214,14 +261,11 @@ function Education() {
 
           {/* Safety & Training */}
       <div className="certifications">
-        <h3 className="certifications-title">Safety & Other Training</h3>
+        <h3 className="certifications-title">{t.safetyTitle}</h3>
         <div className="certifications-list">
-          <span className="cert-badge">IOSH Managing Safely HSE</span>
-          <span className="cert-badge">IOSH Working Safely HSE</span>
-          <span className="cert-badge">Advanced First Aid Training</span>
-          <span className="cert-badge">Basic First Aid Training</span>
-          <span className="cert-badge">Defensive Driving Licence</span>
-          <span className="cert-badge">Driving Licence Cat-B</span>
+          {t.safetyBadges.map((badge) => (
+            <span className="cert-badge" key={badge}>{badge}</span>
+          ))}
         </div>
       </div>
 
@@ -230,19 +274,19 @@ function Education() {
 
       {/* Languages subsection */}
       <div className="languages">
-        <h3 className="languages-title">Languages</h3>
+        <h3 className="languages-title">{t.languagesTitle}</h3>
         <div className="languages-grid">          
           <div className="language-item">
-            <span className="language-name">French</span>
-            <span className="language-level">Full Professional</span>
+            <span className="language-name">{t.french}</span>
+            <span className="language-level">{t.fullProfessional}</span>
           </div>
           <div className="language-item">
-            <span className="language-name">English</span>
-            <span className="language-level">Full Professional</span>
+            <span className="language-name">{t.english}</span>
+            <span className="language-level">{t.fullProfessional}</span>
           </div>
           <div className="language-item">
-            <span className="language-name">Arabic</span>
-            <span className="language-level">Native</span>
+            <span className="language-name">{t.arabic}</span>
+            <span className="language-level">{t.native}</span>
           </div>
         </div>
       </div>

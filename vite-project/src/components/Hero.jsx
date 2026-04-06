@@ -3,7 +3,28 @@ import React from "react";
 import profileImg from "../assets/profile_5.png";
 import ThemeToggle from "./ThemeToggle.jsx";
 
-function Hero() {
+function Hero({ language }) {
+  const content = {
+    en: {
+      subtitle: "Land Surveyor · Cartographer · Civil Works Engineer · Technical Support",
+      description:
+        "Passionate geomatics and civil engineering professional with experience in GIS, land surveying, GNSS, and infrastructure projects in energy and public works.",
+      aboutButton: "About me",
+      experienceButton: "Experience",
+      resumeButton: "Resume"
+    },
+    fr: {
+      subtitle: "Géomètre-Topographe · Cartographe · Ingénieur Génie Civil · Support Technique",
+      description:
+        "Professionnel passionné en géomatique et génie civil, avec une solide expérience en SIG, topographie, GNSS et projets d'infrastructure dans l'énergie et les travaux publics.",
+      aboutButton: "À propos",
+      experienceButton: "Experience",
+      resumeButton: "CV"
+    }
+  };
+
+  const t = content[language];
+
   return (
     <header className="hero" id="home">
       <div className="hero__top">
@@ -14,13 +35,8 @@ function Hero() {
       </div>
 
       <h1 className="hero__title">Frah Brahim</h1>
-      <p className="hero__subtitle">
-        Land Surveyor · Cartographer · Civil Works Engineer · Technical Support
-      </p>
-      <p className="hero__text">
-        Passionate geomatics and civil engineering professional with experience in GIS,
-        land surveying, GNSS, and infrastructure projects in energy and public works.
-      </p>
+      <p className="hero__subtitle">{t.subtitle}</p>
+      <p className="hero__text">{t.description}</p>
 
       {/* Social links with icons */}
       <div className="hero__socials">
@@ -76,14 +92,14 @@ function Hero() {
 
       {/* Action buttons with Resume download */}
       <div className="hero__buttons">
-        <a href="#about" className="btn primary">About me</a>
-        <a href="#experience" className="btn secondary">Experience</a>
+        <a href="#about" className="btn primary">{t.aboutButton}</a>
+        <a href="#experience" className="btn secondary">{t.experienceButton}</a>
         <a 
           href="/CV_Frah_Brahim_English.pdf" 
           download="Frah_Brahim_CV.pdf"
           className="btn resume"
         >
-          Resume
+          {t.resumeButton}
         </a>
       </div>
     </header>

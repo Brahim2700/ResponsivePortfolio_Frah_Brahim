@@ -1,53 +1,103 @@
 // Projects.jsx
 import React from "react";
 
-function Projects() {
+function Projects({ language }) {
+  const content = {
+    en: {
+      title: "Projects",
+      intro:
+        "Specialized web applications combining geomatics expertise with modern development. More projects coming soon.",
+      cards: [
+        {
+          tag: "Live",
+          title: "Survey Calculator Suite",
+          description:
+            "Professional toolset for surveyors including coordinate system conversions (Lambert93, WGS84, UTM), traverse calculations, area/volume computations, and bearing/distance calculations.",
+          tech: "React • JavaScript • Geodesy • Surveying",
+          link: "https://survey-calculator-suite.vercel.app/"
+        },
+        {
+          tag: "In Development",
+          title: "Interactive WebGIS Dashboard",
+          description:
+            "Web-based GIS platform for visualizing and analyzing spatial data with interactive maps, layer management, data filtering, and real-time updates for infrastructure projects.",
+          tech: "React • Leaflet • GeoJSON • MapBox"
+        },
+        {
+          tag: "Planned",
+          title: "GNSS Data Processor",
+          description:
+            "Advanced tool for processing and visualizing GNSS/GPS survey data. Features include RINEX file support, satellite track visualization, position accuracy analysis, and quality control metrics.",
+          tech: "React • Python • GNSS • Data Visualization"
+        }
+      ]
+    },
+    fr: {
+      title: "Projets",
+      intro:
+        "Applications web spécialisées combinant expertise en géomatique et développement moderne. D'autres projets arrivent bientôt.",
+      cards: [
+        {
+          tag: "En ligne",
+          title: "Survey Calculator Suite",
+          description:
+            "Suite d'outils professionnelle pour topographes incluant les conversions de systèmes de coordonnées (Lambert93, WGS84, UTM), les calculs de polygonales, de surfaces/volumes et de gisements/distances.",
+          tech: "React • JavaScript • Géodésie • Topographie",
+          link: "https://survey-calculator-suite.vercel.app/"
+        },
+        {
+          tag: "En développement",
+          title: "Tableau de Bord WebGIS Interactif",
+          description:
+            "Plateforme SIG web pour visualiser et analyser des données spatiales avec cartes interactives, gestion de couches, filtres de données et mises à jour en temps réel pour les projets d'infrastructure.",
+          tech: "React • Leaflet • GeoJSON • MapBox"
+        },
+        {
+          tag: "Planifié",
+          title: "Processeur de Données GNSS",
+          description:
+            "Outil avancé pour traiter et visualiser les données de levés GNSS/GPS. Fonctionnalités: support des fichiers RINEX, visualisation des trajectoires satellites, analyse de précision et indicateurs de contrôle qualité.",
+          tech: "React • Python • GNSS • Data Visualization"
+        }
+      ]
+    }
+  };
+
+  const t = content[language];
+
   return (
     <section className="section" id="projects">
-      <h2>Projects</h2>
-      <p className="projects__intro">
-        Specialized web applications combining geomatics expertise with modern development. 
-        More projects coming soon.
-      </p>
+      <h2>{t.title}</h2>
+      <p className="projects__intro">{t.intro}</p>
       
       <div className="projects-grid">
-        <a
-          href="https://survey-calculator-suite.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-card project-card--link"
-        >
-          <div className="project-tag">Live</div>
-          <h3>Survey Calculator Suite</h3>
-          <p>
-            Professional toolset for surveyors including coordinate system conversions 
-            (Lambert93, WGS84, UTM), traverse calculations, area/volume computations, 
-            and bearing/distance calculations.
-          </p>
-          <div className="project-tech">React • JavaScript • Geodesy • Surveying</div>
-        </a>
+        {t.cards.map((card) => {
+          if (card.link) {
+            return (
+              <a
+                key={card.title}
+                href={card.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-card project-card--link"
+              >
+                <div className="project-tag">{card.tag}</div>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <div className="project-tech">{card.tech}</div>
+              </a>
+            );
+          }
 
-        <div className="project-card">
-          <div className="project-tag">In Development</div>
-          <h3>Interactive WebGIS Dashboard</h3>
-          <p>
-            Web-based GIS platform for visualizing and analyzing spatial data with 
-            interactive maps, layer management, data filtering, and real-time updates 
-            for infrastructure projects.
-          </p>
-          <div className="project-tech">React • Leaflet • GeoJSON • MapBox</div>
-        </div>
-
-        <div className="project-card">
-          <div className="project-tag">Planned</div>
-          <h3>GNSS Data Processor</h3>
-          <p>
-            Advanced tool for processing and visualizing GNSS/GPS survey data. 
-            Features include RINEX file support, satellite track visualization, 
-            position accuracy analysis, and quality control metrics.
-          </p>
-          <div className="project-tech">React • Python • GNSS • Data Visualization</div>
-        </div>
+          return (
+            <div className="project-card" key={card.title}>
+              <div className="project-tag">{card.tag}</div>
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+              <div className="project-tech">{card.tech}</div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
