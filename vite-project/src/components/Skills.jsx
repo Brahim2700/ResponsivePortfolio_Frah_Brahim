@@ -21,7 +21,7 @@ function Skills({ language }) {
         },
         {
           title: "Programming & Data",
-          description: "Python, MATLAB, PostgreSQL, SQL, geospatial data processing."
+          description: "Python, MATLAB, PostgreSQL, SQL, JavaScript, web mapping, geospatial data processing."
         },
         {
           title: "Sales & Business Development",
@@ -53,7 +53,7 @@ function Skills({ language }) {
         },
         {
           title: "Programmation & Données",
-          description: "Python, MATLAB, PostgreSQL, SQL, traitement de données géospatiales."
+          description: "Python, MATLAB, PostgreSQL, SQL, JavaScript, web mapping, traitement de données géospatiales."
         },
         {
           title: "Vente et Développement Commercial",
