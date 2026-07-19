@@ -24,6 +24,12 @@ function Hero({ language }) {
   };
 
   const t = content[language];
+  const resumeHref =
+    language === "fr"
+      ? "/CV_Frah_Brahim_fran%C3%A7ais.pdf"
+      : "/CV_Frah_Brahim_English.pdf";
+  const resumeDownloadName =
+    language === "fr" ? "CV_Frah_Brahim_FR.pdf" : "CV_Frah_Brahim_EN.pdf";
 
   return (
     <header className="hero" id="home">
@@ -95,8 +101,8 @@ function Hero({ language }) {
         <a href="#about" className="btn primary">{t.aboutButton}</a>
         <a href="#experience" className="btn secondary">{t.experienceButton}</a>
         <a 
-          href="/CV_Frah_Brahim_English.pdf" 
-          download="Frah_Brahim_CV.pdf"
+          href={resumeHref}
+          download={resumeDownloadName}
           className="btn resume"
         >
           {t.resumeButton}
